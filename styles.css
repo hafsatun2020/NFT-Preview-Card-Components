@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+ 
+ 
+ :root {
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+--Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+--Very-dark-blue-line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+
+ }
+
+ * {
+    box-sizing: border-box;
+ }
+
+ body {
+font-family: 'Outfit', sans-serif;
+Font-size: 18px;
+background-color: var(--Very-dark-blue-main-BG);
+margin: 0;
+padding: 0;
+/*
+width: 100vw; caused contents to spill out of div
+height: 100vh;
+*/
+z-index: 0;
+justify-content: center;
+align-items: center;
+ }
+
+ 
+.container {
+    
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+   
+    background-color: var(--Very-dark-blue-card-BG);
+    margin: 40px auto; 
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 0;
+    max-width: 370px;
+    
+  
+}
+
+view {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: var(--Cyan);
+    
+    z-index: -2;
+}
+.view-container {
+    width: 100%;
+    height: 60%;
+    z-index: 0;
+    background-color: var(--Cyan);
+    border-radius: 12px;
+    
+
+}
+
+.NFT-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 10px;
+    position: relative;
+    top: 0%;
+    
+}
+/*
+.image-container {
+    width: 100%;
+    height: 40%;
+}
+*/
+.view-container:hover {
+opacity: 0.5S;
+}
+.NFT-image:hover {
+    cursor: pointer;
+    opacity: 0.3;
+    background-color: var(--Cyan);
+    content: url(./images/icon-view.svg);
+    width: 100%;
+    height: 60%;
+    
+}
+
+.name {
+    font-weight: 600;
+    color: var(--White);
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: 2%;
+    margin-top: 8%;
+}
+
+.name:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.description {
+    line-height: 1.5em;
+    margin: 20px 0;
+}
+
+.eth {
+    color: var(--Cyan);
+}
+
+p {
+    margin: 4px;
+    color: var(--Soft-blue);
+    font-size: 1.1em;
+}
+
+
+.price {
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+   border-bottom: 1px solid var(--Very-dark-blue-line);
+   padding: 15px 0;
+}
+
+.creator {
+    display: flex;
+    flex-direction: row;
+   font-weight: 300;
+    font-size: 0.75em;
+    margin: 20px 0;
+    padding: 10px;
+    margin-bottom: 0%;
+}
+
+span {
+    color: white;
+}
+
+.image-avatar {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
+
+span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+@media (min-width: 850px) {
+    .container {
+       /* width: 400px;
+        height: 70%;
+        max-height: 750px;
+
+        *not needed*
+        */
+    }
+ * {
+    margin: 0%;
+    padding: 0;
+ }
+}
